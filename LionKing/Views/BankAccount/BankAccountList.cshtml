@@ -1,0 +1,43 @@
+﻿@model LionKing.Models.BankAccountList
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+    <link href="@Url.Content("~/css/style.css")" rel="stylesheet" type="text/css" />
+    <title>BankAccount List</title>
+</head>
+<body>
+    This is the list of the BankAccounts:
+    <table>
+        <tr>
+            <td><h1>ID</h1></td>
+            <td><h1>Name</h1></td>
+            <td><h1>Balance</h1></td>
+            <td><h1>Currency</h1></td>
+            <td><h1>Animaltype</h1></td>
+            <td><h1>Status</h1></td>
+            <td><h1>Good or Bad</h1></td>
+        </tr>
+        @for (int i = 0; i < Model.bankAccountList.Count(); i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@Model.bankAccountList[i].Name</td>
+                <td>@Model.bankAccountList[i].Balance</td>
+                <td>@Model.bankAccountList[i].Currency</td>
+                <td>@Model.bankAccountList[i].Animaltype</td>
+                <td>@if (Model.bankAccountList[i].IsKingOrNot)
+                {
+                    @:<span id="king">King</span>
+                }
+                else
+                {
+                    @:dependant
+                }
+                </td>
+                <td>@((Model.bankAccountList[i].GoodGuy) ? "Good guy" : "Bad guy")</td>
+                <td><form><input type="button" value="Add" /></form></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

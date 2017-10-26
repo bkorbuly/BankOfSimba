@@ -1,0 +1,11 @@
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\bin\Debug\netcoreapp2.0\LionKing.deps.json
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\bin\Debug\netcoreapp2.0\LionKing.runtimeconfig.json
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\bin\Debug\netcoreapp2.0\LionKing.runtimeconfig.dev.json
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\bin\Debug\netcoreapp2.0\LionKing.dll
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\obj\Debug\netcoreapp2.0\LionKing.csprojResolveAssemblyReference.cache
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\obj\Debug\netcoreapp2.0\LionKing.csproj.CoreCompileInputs.cache
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\obj\Debug\netcoreapp2.0\LionKing.AssemblyInfoInputs.cache
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\obj\Debug\netcoreapp2.0\LionKing.AssemblyInfo.cs
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\bin\Debug\netcoreapp2.0\LionKing.pdb
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\obj\Debug\netcoreapp2.0\LionKing.dll
+C:\Users\Balazs\Greenfox\Week_07\Day_02\LionKing\LionKing\obj\Debug\netcoreapp2.0\LionKing.pdb
