@@ -12544,11 +12544,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Balazs\\Greenfox\\Week_07\\Day_02\\LionKing\\LionKing\\LionKing.csproj",
+      "projectUniqueName": "C:\\Users\\Balazs\\Greenfox_Heroku\\LionKing\\LionKing.csproj",
       "projectName": "LionKing",
-      "projectPath": "C:\\Users\\Balazs\\Greenfox\\Week_07\\Day_02\\LionKing\\LionKing\\LionKing.csproj",
+      "projectPath": "C:\\Users\\Balazs\\Greenfox_Heroku\\LionKing\\LionKing.csproj",
       "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Balazs\\Greenfox\\Week_07\\Day_02\\LionKing\\LionKing\\obj\\",
+      "outputPath": "C:\\Users\\Balazs\\Greenfox_Heroku\\LionKing\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
