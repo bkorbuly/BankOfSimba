@@ -32,11 +32,17 @@ namespace LionKing.Controllers
             return View(bankAccountOne);
         }
 
-        [Route("List")]
+        [Route("/")]
         public IActionResult BankAccountList()
         {
-            bankaccountList.FillList();
             return View(bankaccountList);
+        }
+
+        [HttpPost]
+        public IActionResult Add()
+        {
+            bankaccountList.
+            return RedirectToAction("BankaccountList");
         }
     }
 }

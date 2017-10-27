@@ -14,5 +14,10 @@ namespace LionKing.Models
         public string Name { get; set; }
         public double Balance { get; set; }
         public Animaltypes Animaltypes { get; set; }
+
+        public void Add()
+        {
+            Balance += 100;
+        }
     }
 }

@@ -7,6 +7,10 @@ namespace LionKing.Models
 {
     public class BankAccountList
     {
+        public BankAccountList()
+        {
+            FillList();
+        }
         public BankAccount bankAccountOne = new BankAccount()
         {
             Name = "Simba",
