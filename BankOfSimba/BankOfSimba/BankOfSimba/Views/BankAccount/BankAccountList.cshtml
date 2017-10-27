@@ -1,8 +1,8 @@
-﻿@model BankOfSimba.Models.BankAccount
+﻿@model BankOfSimba.Models.
 <!Doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Bankaccount</title>
+    <title>List of Bankaccounts</title>
 </head>
 <body>
     <table>
@@ -11,11 +11,12 @@
             <td><h1>Balance</h1></td>
             <td><h1>Animaltype</h1></td>
         </tr>
+        @{ @Model.}
         <tr>
             <td>@Model.Name</td>
             <td>@String.Format("{0:0.00} {1}", @Model.Balance, @Model.currency)</td>
             <td>@Model.Animaltype</td>
         </tr>
-    </table>   
+    </table>
 </body>
 </html>

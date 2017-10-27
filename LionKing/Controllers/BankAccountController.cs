@@ -11,6 +11,13 @@ namespace LionKing.Controllers
 {
     public class BankAccountController : Controller
     {
+        BankAccountList bankaccountList;
+
+        public BankAccountController(BankAccountList bankaccountList)
+        {
+            this.bankaccountList = bankaccountList;
+        }
+
         // GET: /<controller>/
         [Route("Simba")]
         public IActionResult Index()
@@ -19,7 +26,7 @@ namespace LionKing.Controllers
             {
                 Name = "Simba",
                 Balance = 2000,
-                Animaltype = "Lion",
+                Animaltypes = Animaltypes.Lion,
                 Currency = "Zebra"
             };
             return View(bankAccountOne);
@@ -28,9 +35,8 @@ namespace LionKing.Controllers
         [Route("List")]
         public IActionResult BankAccountList()
         {
-            var bankAccountList = new BankAccountList();
-            bankAccountList.FillList();
-            return View(bankAccountList);
+            bankaccountList.FillList();
+            return View(bankaccountList);
         }
     }
 }

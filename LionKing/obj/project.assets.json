@@ -5719,7 +5719,7 @@
       ]
     },
     "Microsoft.AspNetCore.StaticFiles/2.0.0": {
-      "sha512": "HBMJQ1WPdHO0thltwi7agvfis3c1Kd5HFQDgyy0nV3X4mJvhVGUnymT0+QQU+GGNK9FG/uEQNE3YDSrrBamP7w==",
+      "sha512": "SDN03uGwxRfy5M2a8hcHQgSlZmTwyPIuc3b4i/GE68cMakj/oDhK2zRUmonmC8tYeS6o1azIOB7cLOFj4kMCFg==",
       "type": "package",
       "path": "microsoft.aspnetcore.staticfiles/2.0.0",
       "files": [

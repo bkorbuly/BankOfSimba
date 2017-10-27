@@ -12,7 +12,6 @@
             <td><h1>ID</h1></td>
             <td><h1>Name</h1></td>
             <td><h1>Balance</h1></td>
-            <td><h1>Currency</h1></td>
             <td><h1>Animaltype</h1></td>
             <td><h1>Status</h1></td>
             <td><h1>Good or Bad</h1></td>
@@ -22,9 +21,8 @@
             <tr>
                 <td>@(i + 1)</td>
                 <td>@Model.bankAccountList[i].Name</td>
-                <td>@Model.bankAccountList[i].Balance</td>
-                <td>@Model.bankAccountList[i].Currency</td>
-                <td>@Model.bankAccountList[i].Animaltype</td>
+                <td>@String.Format("{0:0.00} {1}", Model.bankAccountList[i].Balance, Model.bankAccountList[i].Currency)</td>
+                <td>@Model.bankAccountList[i].Animaltypes</td>
                 <td>@if (Model.bankAccountList[i].IsKingOrNot)
                 {
                     @:<span id="king">King</span>

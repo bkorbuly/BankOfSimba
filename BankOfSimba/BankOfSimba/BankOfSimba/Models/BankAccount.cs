@@ -7,6 +7,8 @@ namespace BankOfSimba.Models
 {
     public class BankAccount
     {
+        public string currency = "Zebra";
+
         public string Name { get; set; }
         public double Balance { get; set; }
         public Animaltype Animaltype { get; set; }

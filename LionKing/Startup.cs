@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.DependencyInjection;
+using LionKing.Models;
 
 namespace LionKing
 {
@@ -17,7 +18,7 @@ namespace LionKing
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            
+            services.AddSingleton<BankAccountList>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
