@@ -3,14 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using LionKing.Models;
+using BankOfSimba.Models;
+using BankOfSimba.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace BankOfSimba.Controllers
 {
+    [Route("")]
     public class BankAccountController : Controller
     {
+        Repository repository;
+
+        public BankAccountController(Repository repository)
+        {
+            this.repository = repository;
+        }
+
         [Route("Simba")]
         public IActionResult Index()
         {
@@ -22,12 +31,19 @@ namespace BankOfSimba.Controllers
             };
             return View(bankaccount);
         }
-        [Route("List")]
+
+        [Route("/list")]
         public IActionResult BankAccountList()
         {
-            var bankaccountList = new BankAccountList();
-            bankaccountList.FillList();
-            return View(bankaccountList);
+            return View(repository);
+        }
+
+        [Route("/BankAccount/IncreaseBalance")]
+        [HttpPost]
+        public IActionResult IncreaseBalance(BankAccount bankAccount)
+        {
+            bankAccount.Increase();
+            return RedirectToAction("BankAccountList");
         }
     }
 }

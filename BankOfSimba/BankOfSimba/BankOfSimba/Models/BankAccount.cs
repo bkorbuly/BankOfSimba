@@ -11,6 +11,20 @@ namespace BankOfSimba.Models
 
         public string Name { get; set; }
         public double Balance { get; set; }
-        public Animaltype Animaltype { get; set; }
+        public Animaltype Animaltype;
+        public bool Isking = false;
+        public bool IsGood = true;
+
+        public void Increase()
+        {
+           if(Isking == true)
+           {
+               Balance += 100;
+           }
+           else
+           {
+               Balance += 10;
+           }
+        }
     }
 }

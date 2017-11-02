@@ -1,4 +1,4 @@
-﻿@model BankOfSimba.Models.
+﻿@model BankOfSimba.ViewModels.Repository
 <!Doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,13 +10,25 @@
             <td><h1>Name</h1></td>
             <td><h1>Balance</h1></td>
             <td><h1>Animaltype</h1></td>
+            <td><h1>Is King?</h1></td>
+            <td><h1>Is Good?</h1></td>
         </tr>
-        @{ @Model.}
+        @foreach (var bankaccount in @Model.bankAccountList)
+        {
         <tr>
-            <td>@Model.Name</td>
-            <td>@String.Format("{0:0.00} {1}", @Model.Balance, @Model.currency)</td>
-            <td>@Model.Animaltype</td>
+            <td>@bankaccount.Name</td>
+            <td>@String.Format("{0:0.00} {1}", bankaccount.Balance, bankaccount.currency)</td>
+            <td>@bankaccount.Animaltype</td>
+            <td>@bankaccount.Isking</td>
+            <td>@bankaccount.IsGood</td>
+            <td>
+                <form action="/BankAccount/IncreaseBalance" method="post">
+                    <input type="hidden" value="@bankaccount" name="Balance" />
+                    <button type="submit">Add</button>
+                </form>
+            </td>
         </tr>
+        }
     </table>
 </body>
 </html>

@@ -4,10 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LionKing.Models
+namespace BankOfSimba.Models
 {
     public class BankAccountList
     {
+        public List<BankAccount> bankAccountList = new List<BankAccount>();
+
+        public BankAccountList()
+        {
+            FillList();
+        }
+
         public BankAccount bankAccountOne = new BankAccount()
         {
             Name = "Simba",
@@ -38,8 +45,6 @@ namespace LionKing.Models
             Balance = 200000000000,
             Animaltype = Animaltype.Meerkat
         };
-
-        public List<BankAccount> bankAccountList = new List<BankAccount>();
 
         public List<BankAccount> FillList()
         {
