@@ -17,14 +17,11 @@ namespace BankOfSimba.Models
 
         public void Increase()
         {
-           if(Isking == true)
-           {
+           if(Isking)
                Balance += 100;
-           }
            else
-           {
                Balance += 10;
-           }
+           
         }
     }
 }

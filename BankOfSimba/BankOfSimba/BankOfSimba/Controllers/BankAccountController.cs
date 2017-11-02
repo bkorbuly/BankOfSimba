@@ -10,7 +10,7 @@ using BankOfSimba.ViewModels;
 
 namespace BankOfSimba.Controllers
 {
-    [Route("")]
+    [Route("/start")]
     public class BankAccountController : Controller
     {
         Repository repository;
@@ -20,17 +20,17 @@ namespace BankOfSimba.Controllers
             this.repository = repository;
         }
 
-        [Route("Simba")]
-        public IActionResult Index()
-        {
-            var bankaccount = new BankOfSimba.Models.BankAccount()
-            {
-                Name = "Simba",
-                Balance = 2000,
-                Animaltype = Models.Animaltype.Lion
-            };
-            return View(bankaccount);
-        }
+        //[Route("Simba")]
+        //public IActionResult Index()
+        //{
+        //    var bankaccount = new BankOfSimba.Models.BankAccount()
+        //    {
+        //        Name = "Simba",
+        //        Balance = 2000,
+        //        Animaltype = Models.Animaltype.Lion
+        //    };
+        //    return View(bankaccount);
+        //}
 
         [Route("/list")]
         public IActionResult BankAccountList()
