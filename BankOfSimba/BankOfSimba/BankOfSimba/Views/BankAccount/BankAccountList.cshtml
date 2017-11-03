@@ -1,4 +1,4 @@
-﻿@model BankOfSimba.ViewModels.Repository
+﻿@model BankOfSimba.ViewModels.BankAccountList
 <!Doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,8 +22,8 @@
             <td>@bankaccount.Isking</td>
             <td>@bankaccount.IsGood</td>
             <td>
-                <form action="/BankAccount/IncreaseBalance" method="post">
-                    <input type="hidden" value="@bankaccount" name="Balance" />
+                <form action="/IncreaseBalance" method="post">
+                    <input type="hidden" name="@bankaccount.Balance" id="@bankaccount" value="@bankaccount" />
                     <button type="submit">Add</button>
                 </form>
             </td>

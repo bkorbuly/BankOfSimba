@@ -10,36 +10,35 @@ using BankOfSimba.ViewModels;
 
 namespace BankOfSimba.Controllers
 {
-    [Route("/start")]
     public class BankAccountController : Controller
     {
-        Repository repository;
+        BankAccountList bankAccountList = new BankAccountList();
 
-        public BankAccountController(Repository repository)
-        {
-            this.repository = repository;
-        }
-
-        //[Route("Simba")]
-        //public IActionResult Index()
+        //public BankAccountController(BankAccountList bankAccountList)
         //{
-        //    var bankaccount = new BankOfSimba.Models.BankAccount()
-        //    {
-        //        Name = "Simba",
-        //        Balance = 2000,
-        //        Animaltype = Models.Animaltype.Lion
-        //    };
-        //    return View(bankaccount);
+        //    this.bankAccountList = bankAccountList;
         //}
 
-        [Route("/list")]
-        public IActionResult BankAccountList()
+        [Route("Simba")]
+        public IActionResult Index()
         {
-            return View(repository);
+            var bankaccount = new BankOfSimba.Models.BankAccount()
+            {
+                Name = "Simba",
+                Balance = 2000,
+                Animaltype = Models.Animaltype.Lion
+            };
+            return View(bankaccount);
         }
 
-        [Route("/BankAccount/IncreaseBalance")]
+        [Route("")]
+        public IActionResult BankAccountList()
+        {
+            return View(bankAccountList);
+        }
+
         [HttpPost]
+        [Route("/IncreaseBalance")]
         public IActionResult IncreaseBalance(BankAccount bankAccount)
         {
             bankAccount.Increase();

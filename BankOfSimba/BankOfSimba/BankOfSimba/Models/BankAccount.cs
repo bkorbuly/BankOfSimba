@@ -21,7 +21,6 @@ namespace BankOfSimba.Models
                Balance += 100;
            else
                Balance += 10;
-           
         }
     }
 }
