@@ -8,53 +8,44 @@ namespace BankOfSimba.ViewModels
 {
     public class BankAccountList
     {
-        public List<BankAccount> bankAccountList = new List<BankAccount>();
-
-        public BankAccountList()
+        public static List<BankAccount> bankAccountList = new List<BankAccount>()
         {
-            FillList();
-        }
-
-        public BankAccount bankAccountOne = new BankAccount()
-        {
-            Name = "Simba",
-            Balance = 2000,
-            Animaltype = Animaltype.Lion
-        };
-        public BankAccount bankAccountTwo = new BankAccount()
-        {
-            Name = "Zordon",
-            Balance = -2000,
-            Animaltype = Animaltype.Lion
-        };
-        public BankAccount bankAccountThree = new BankAccount()
-        {
-            Name = "Mufasa",
-            Balance = 2000000,
-            Animaltype = Animaltype.Lion
-        };
-        public BankAccount bankAccountFour = new BankAccount()
-        {
-            Name = "Pumba",
-            Balance = 200000000000,
-            Animaltype = Animaltype.Warthog
-        };
-        public BankAccount bankAccountFive = new BankAccount()
-        {
-            Name = "Timon",
-            Balance = 200000000000,
-            Animaltype = Animaltype.Meerkat
-        };
-
-        public List<BankAccount> FillList()
-        {
-            bankAccountList.Add(bankAccountOne);
-            bankAccountList.Add(bankAccountTwo);
-            bankAccountList.Add(bankAccountThree);
-            bankAccountList.Add(bankAccountFour);
-            bankAccountList.Add(bankAccountFive);
-            return bankAccountList;
-        }
-
+            new BankAccount()
+            {
+                Id = 1,
+                Name = "Simba",
+                Balance = 2000,
+                Animaltype = Animaltype.Lion
+            },
+            new BankAccount()
+            {
+                Id = 2,
+                Name = "Zordon",
+                Balance = -2000,
+                Animaltype = Animaltype.Lion
+            },
+            new BankAccount()
+            {
+                Id = 3,
+                Name = "Mufasa",
+                Balance = 2000000,
+                Animaltype = Animaltype.Lion,
+                Isking = true
+            },
+            new BankAccount()
+            {
+                Id = 4,
+                Name = "Pumba",
+                Balance = 200000000000,
+                Animaltype = Animaltype.Warthog
+            },
+            new BankAccount()
+            {
+                Id = 5,
+                Name = "Timon",
+                Balance = 200000000000,
+                Animaltype = Animaltype.Meerkat
+            }
+        };    
     }
 }

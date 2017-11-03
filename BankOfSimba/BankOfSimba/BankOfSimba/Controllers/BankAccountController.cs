@@ -12,8 +12,6 @@ namespace BankOfSimba.Controllers
 {
     public class BankAccountController : Controller
     {
-        BankAccountList bankAccountList = new BankAccountList();
-
         //public BankAccountController(BankAccountList bankAccountList)
         //{
         //    this.bankAccountList = bankAccountList;
@@ -32,17 +30,19 @@ namespace BankOfSimba.Controllers
         }
 
         [Route("")]
-        public IActionResult BankAccountList()
+        public IActionResult BankAccount()
         {
-            return View(bankAccountList);
+            return View(BankAccountList.bankAccountList);
         }
 
         [HttpPost]
         [Route("/IncreaseBalance")]
         public IActionResult IncreaseBalance(BankAccount bankAccount)
         {
-            bankAccount.Increase();
-            return RedirectToAction("BankAccountList");
+            var bankaccounttemp = 
+            BankAccountList.bankAccountList.Where(x => x.Id == bankAccount.Id);
+            bankaccounttemp.First().Increase();
+            return RedirectToAction("BankAccount");
         }
     }
 }

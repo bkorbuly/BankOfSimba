@@ -1,5 +1,4 @@
-﻿@model BankOfSimba.ViewModels.BankAccountList
-<!Doctype html>
+﻿<!Doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>List of Bankaccounts</title>
@@ -13,7 +12,7 @@
             <td><h1>Is King?</h1></td>
             <td><h1>Is Good?</h1></td>
         </tr>
-        @foreach (var bankaccount in @Model.bankAccountList)
+        @foreach (var bankaccount in BankOfSimba.ViewModels.BankAccountList.bankAccountList)
         {
         <tr>
             <td>@bankaccount.Name</td>
@@ -23,7 +22,13 @@
             <td>@bankaccount.IsGood</td>
             <td>
                 <form action="/IncreaseBalance" method="post">
-                    <input type="hidden" name="@bankaccount.Balance" id="@bankaccount" value="@bankaccount" />
+                    <input type="hidden" name="Id" value="@bankaccount.Id" />
+                    <input type="hidden" name="Name" value="@bankaccount.Name"/>
+                    <input type="hidden" name="Balance" value="@bankaccount.Balance" />
+                    <input type="hidden" name="Currency" value="@bankaccount.currency"/>
+                    <input type="hidden" name="Animaltype" value="@bankaccount.Animaltype"/>
+                    <input type="hidden" name="Isking" value="@bankaccount.Isking"/>
+                    <input type="hidden" name="IsGood" value="@bankaccount.IsGood"/>
                     <button type="submit">Add</button>
                 </form>
             </td>

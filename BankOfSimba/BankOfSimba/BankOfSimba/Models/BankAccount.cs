@@ -9,6 +9,7 @@ namespace BankOfSimba.Models
     {
         public string currency = "Zebra";
 
+        public int Id { get; set; }
         public string Name { get; set; }
         public double Balance { get; set; }
         public Animaltype Animaltype;
@@ -17,10 +18,10 @@ namespace BankOfSimba.Models
 
         public void Increase()
         {
-           if(Isking)
-               Balance += 100;
+           if(this.Isking)
+               this.Balance += 100;
            else
-               Balance += 10;
+                this.Balance += 10;
         }
     }
 }
