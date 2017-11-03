@@ -34,6 +34,20 @@
             </td>
         </tr>
         }
+        <tr>
+            <td>
+                <form action="/AddNewElement" method="post">
+                    <label>Id:</label><input type="text" name="Id"/><br>
+                    <label>Name:</label><input type="text" name="Name"/><br>
+                    <label>Balance:</label><input type="text" name="Balance"/><br>
+                    <input type="hidden" name="Currency" value="Zebra"/>
+                    <label>Animaltype</label><input type="text" name="Animaltype"/><br>
+                    <label for="king">King?</label><input type="radio" name="Isking" id="king" value="true" />
+                    <label for="good">Good?</label><input type="radio" name="IsGood" id="good" value="true" />
+                    <button type="submit">Add</button>
+                </form>
+            </td>   
+         </tr>
     </table>
 </body>
 </html>

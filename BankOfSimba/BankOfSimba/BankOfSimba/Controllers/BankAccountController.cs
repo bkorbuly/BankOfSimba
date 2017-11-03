@@ -44,5 +44,12 @@ namespace BankOfSimba.Controllers
             bankaccounttemp.First().Increase();
             return RedirectToAction("BankAccount");
         }
+        [HttpPost]
+        [Route("/AddNewElement")]
+        public IActionResult AddNewElement(BankAccount bankAccount)
+        {
+            bankAccount.AddElement(bankAccount);
+            return RedirectToAction("BankAccount");
+        }
     }
 }

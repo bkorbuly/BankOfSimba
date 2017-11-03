@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankOfSimba.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,6 +23,11 @@ namespace BankOfSimba.Models
                this.Balance += 100;
            else
                 this.Balance += 10;
+        }
+
+        public void AddElement(BankAccount bankAccount)
+        {
+            BankAccountList.bankAccountList.Add(bankAccount);
         }
     }
 }
